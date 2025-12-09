@@ -7,3 +7,12 @@ header {
   background-color: var(--white);
   box-shadow: var(--shadow-sm);
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
