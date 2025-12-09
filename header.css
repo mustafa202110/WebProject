@@ -16,3 +16,12 @@ header {
   max-width: 1200px;
   margin: 0 auto;
 }
+.logo img {
+  height: 50px;
+  transition: transform var(--transition-normal);
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
