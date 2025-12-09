@@ -41,6 +41,7 @@ header {
   color: var(--primary-color);
 }
 
+
 .nav-menu li a::after {
   content: '';
   position: absolute;
@@ -67,9 +68,3 @@ header {
   color: var(--text-color);
   transition: color var(--transition-normal), transform var(--transition-normal);
 }
-
-.nav-icons a:hover {
-  color: var(--primary-color);
-  transform: scale(1.2);
-}
-
