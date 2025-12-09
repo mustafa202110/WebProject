@@ -40,3 +40,36 @@ header {
 .nav-menu li a.active {
   color: var(--primary-color);
 }
+
+.nav-menu li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width var(--transition-normal);
+}
+
+.nav-menu li a:hover::after,
+.nav-menu li a.active::after {
+  width: 100%;
+}
+
+.nav-icons {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.nav-icons a {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  transition: color var(--transition-normal), transform var(--transition-normal);
+}
+
+.nav-icons a:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
