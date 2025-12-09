@@ -24,4 +24,19 @@ header {
 .logo img:hover {
   transform: scale(1.05);
 }
+.nav-menu {
+  display: flex;
+  gap: var(--spacing-lg);
+}
 
+.nav-menu li a {
+  position: relative;
+  font-weight: 500;
+  padding: var(--spacing-xs) 0;
+  transition: color var(--transition-normal);
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: var(--primary-color);
+}
