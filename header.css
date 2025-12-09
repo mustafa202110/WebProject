@@ -101,4 +101,3 @@ header::after {
   height: 2px;
   background: linear-gradient(to right, transparent, var(--primary-color), transparent);
 }
-
