@@ -15,4 +15,39 @@
     max-width: 100%;
     margin-bottom: var(--spacing-xl);
   }
+  .reviews-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
   
+  section h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-card {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .review-content {
+    align-items: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hamburger {
+    display: flex;
+  }
