@@ -215,3 +215,50 @@ section h2 {
   align-items: center;
   gap: var(--spacing-md);
 }
+
+.current-price {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+.book-rating {
+  margin-bottom: var(--spacing-md);
+  color: rgb(18, 139, 219);
+  font-size: 0.9rem;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  animation: fadeIn 0.8s ease-out;
+}
+
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
