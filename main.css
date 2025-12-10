@@ -111,3 +111,107 @@ section h2 {
   cursor: pointer;
   transition: background-color var(--transition-fast);
 }
+
+.section-indicator span.active {
+  background-color: var(--primary-color);
+}
+
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.second-row {
+  margin-top: var(--spacing-xl);
+}
+
+.book-card-s {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-md);
+  border: 1px solid var(--gray-200);
+}
+
+
+.books-grid-s {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-md);
+}
+
+
+.book-card {
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-md);
+  border: 1px solid var(--gray-200);
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-md);
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+ 
+}
+
+.book-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+  
+}
+
+
+.book-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.book-categories span {
+  font-size: 0.85rem;
+  color: var(--primary-color);
+}
+
+.book-categories span:not(:last-child)::after {
+  content: '•';
+  margin-left: var(--spacing-xs);
+  color: var(--gray-400);
+}
+
+.book-price {
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
