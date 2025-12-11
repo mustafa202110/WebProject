@@ -46,3 +46,77 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+  // Scroll reveal animation
+  const scrollElements = document.querySelectorAll('.book-card, .review-card, .blog-card, .promo-content');
+  
+  const elementInView = (el, scrollOffset = 100) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return (
+      elementTop <= (window.innerHeight || document.documentElement.clientHeight) - scrollOffset
+    );
+  };
+  
+  const displayScrollElement = (element) => {
+    element.classList.add('revealed');
+  };
+  
+  const hideScrollElement = (element) => {
+    element.classList.remove('revealed');
+  };
+  
+  const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+      if (!el.classList.contains('scroll-reveal')) {
+        el.classList.add('scroll-reveal');
+      }
+      
+      if (elementInView(el, 100)) {
+        displayScrollElement(el);
+      } else {
+        hideScrollElement(el);
+      }
+    });
+  };
+  
+  // Add event listener for scroll
+  window.addEventListener('scroll', () => {
+    handleScrollAnimation();
+  });
+  
+  // Run once on page load
+  handleScrollAnimation();
+  
+  // Book slider dots functionality (placeholder for future implementation)
+  const sectionIndicators = document.querySelectorAll('.section-indicator span');
+  
+  if (sectionIndicators.length > 0) {
+    sectionIndicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', function() {
+        // For now, just update active state
+        // In a real implementation, this would control a slider
+        const parent = this.closest('.section-indicator');
+        parent.querySelectorAll('span').forEach(dot => {
+          dot.classList.remove('active');
+        });
+        this.classList.add('active');
+      });
+    });
+  }
+  
+  // Shopping cart functionality (simplified version)
+  const wishlistIcon = document.querySelector('.wishlist-icon');
+  if (wishlistIcon) {
+    wishlistIcon.addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Wishlist feature coming soon!');
+    });
+  }
+  
+  const searchIcon = document.querySelector('.search-icon');
+  if (searchIcon) {
+    searchIcon.addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Search feature coming soon!');
+    });
+  }
+});
